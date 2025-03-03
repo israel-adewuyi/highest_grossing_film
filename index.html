@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 50 Highest Grossing Films</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Top 50 Highest Grossing Films</h1>
+        <div class="stats">
+          <span id="totalFilms"></span>
+          <span id="avgBoxOffice"></span>
+          <span id="yearRange"></span>
+        </div>
+      </header>
+
+      <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search films..." />
+        <select id="sortSelect">
+          <option value="title">Sort by Title</option>
+          <option value="year">Sort by Year</option>
+          <option value="boxOffice">Sort by Box Office</option>
+        </select>
+        <button id="resetFilters">Reset Filters</button>
+      </div>
+
+      <div class="filters">
+        <div class="filter-group">
+          <h3>Years</h3>
+          <div id="yearFilters" class="filter-options"></div>
+        </div>
+        <div class="filter-group">
+          <h3>Countries</h3>
+          <div id="countryFilters" class="filter-options"></div>
+        </div>
+        <div class="filter-group">
+          <h3>Directors</h3>
+          <div id="directorFilters" class="filter-options"></div>
+        </div>
+      </div>
+
+      <div id="filmsContainer" class="films-grid"></div>
+    </div>
+    <footer>
+      <p>
+        Made with <span class="heart">&hearts;</span> by Israel Adewuyi and Grok
+        3
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

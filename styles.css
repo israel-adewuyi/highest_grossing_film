@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: #1a73e8;
+  margin-bottom: 15px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input[type="text"],
+select,
+button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1557b0;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group h3 {
+  margin-bottom: 10px;
+  color: #1a73e8;
+}
+
+.filter-options label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.films-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.film-card {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.film-card:hover {
+  transform: translateY(-5px);
+}
+
+.film-card h2 {
+  font-size: 1.2em;
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.film-card p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.error {
+  text-align: center;
+  color: #dc3545;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.film-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.film-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.film-image-placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-style: italic;
+}
+
+.film-card a {
+  display: block;
+  margin-top: 10px;
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.film-card a:hover {
+  text-decoration: underline;
+}
+/* New styles to make filter sections scrollable */
+.filter-options {
+  max-height: 200px; /* Adjust this value based on your preference */
+  overflow-y: auto; /* Enables vertical scrolling when content exceeds max-height */
+  padding-right: 10px; /* Adds some padding to prevent scrollbar overlap */
+}
+
+/* Optional: Style the scrollbar for better aesthetics (works in Webkit browsers like Chrome/Safari) */
+.filter-options::-webkit-scrollbar {
+  width: 8px;
+}
+
+.filter-options::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.filter-options::-webkit-scrollbar-thumb {
+  background: #1a73e8;
+  border-radius: 4px;
+}
+
+.filter-options::-webkit-scrollbar-thumb:hover {
+  background: #1557b0;
+}
+footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  color: #666;
+  font-size: 0.9em;
+  border-top: 1px solid #ddd;
+}
+
+footer .heart {
+  color: #e25555; /* A nice red color for the heart */
+  font-size: 1.2em;
+}
